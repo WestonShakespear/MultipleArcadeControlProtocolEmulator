@@ -6,6 +6,7 @@
 
 //Amount of coins received from player One and Two slots
 int coins[2] = {0, 0};
+int addr = 0;
 
 //Pin assignments for controls
 /*
@@ -171,6 +172,12 @@ int displayPins() {
 
   for(int i = 0;i < 8;i++) {
     Serial.print(activePins[i]);
+    EEPROM.write(addr, active[i]);
+    if (addr == EEPROM.length()) {
+     addr = 0;
+    } else {
+     addr += 1;
+    }
   }
   Serial.print("\n");
 
