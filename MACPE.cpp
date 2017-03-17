@@ -4,6 +4,12 @@
 
 //Ms. Pacman control setup
 
+/* Todo:
+ * - Fix coin door code
+ * - Allow 3+ combos
+ * - Add start, select, p1, p2
+ 
+
 //Amount of coins received from player One and Two slots
 int coins[2] = {0, 0};
 int addr = 0;
